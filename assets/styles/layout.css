@@ -1,0 +1,182 @@
+/*
+
+Custom CSS
+=============
+
+Author:  iStudioDTD.com
+Updated: January 2017
+Notes:	 Hand coded for Orange Holiday Villas
+
+*/
+
+/* --------------------------------------
+   Layout
+   -------------------------------------- */
+
+#content {
+    padding-top: 0;
+}
+
+/* --------------------------------------
+   Typography
+   -------------------------------------- */
+
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+}
+
+
+/* --------------------------------------
+   Navbar
+   -------------------------------------- */
+
+nav {
+    z-index: 100000;
+}
+
+.header-block {
+    background: url("../images/header.jpg");
+    height: 210px;
+}
+
+.header-block-logo {
+    width: 350px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-brand {
+    padding: 0 10px 0 0;
+}
+
+.header-block-contacts {
+    width: 385px;
+    height: 200px;
+}
+
+.block-contacts__details {
+    text-align: center;
+    color: white;
+    font-size: large;
+}
+
+.block-contacts__details:first-of-type {
+    padding-top: 15px;
+}
+
+#contacts {
+    width: 254px;
+    height: 106px;
+    margin-left: 20px;
+    background-color: #f08000;
+}
+
+#message {
+    width: 140px;
+    height: 42px;
+    margin-left: 80px;
+    background-color: #94c11f;
+    margin-top: 6px;
+    padding: 0 5px;
+}
+
+#message:hover {
+    background-color: #759C0E;
+}
+
+#object-find {
+    height: 40px;
+    width: 282px;
+    margin-top: 7px;
+    margin-left: 8px;
+    background-color: gainsboro;
+}
+
+#object-find_input {
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+#object-find_button {
+    margin-top: 3px;
+    margin-left: 10px;
+}
+
+.affix {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.affix + #content {
+    padding-top: 70px;;
+}
+
+.dropdown-header {
+    font-size: medium;
+    font-style: italic;
+}
+
+/* --------------------------------------
+   Global Styles
+   -------------------------------------- */
+
+.slideanim {visibility:hidden;}
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    /* The duration of the animation */
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible;
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+
+/* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+
+/* Portrait & landscape phone */
+@media (max-width: 480px) {
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}

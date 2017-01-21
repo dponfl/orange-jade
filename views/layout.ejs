@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <base href="/">
+    <title>Orange Holiday Villas</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <!--
+        Stylesheets and Preprocessors
+        ==============================
+
+        You can always bring in CSS files manually with `<link>` tags, or asynchronously
+        using a solution like AMD (RequireJS).  Or, if you like, you can take advantage
+        of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+        By default, stylesheets from your `assets/styles` folder are included
+        here automatically (between STYLES and STYLES END). Both CSS (.css) and LESS (.less)
+        are supported. In production, your styles will be minified and concatenated into
+        a single file.
+
+        To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+
+            + Change the order of your CSS files
+            + Import stylesheets from other directories
+            + Use a different or additional preprocessor, like SASS, SCSS or Stylus
+    -->
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/bootstrap-glyphicons.css">
+    <link rel="stylesheet" href="/styles/bootstrap.css">
+    <link rel="stylesheet" href="/styles/exclusive.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <!--STYLES END-->
+
+    <!--
+      Modernizr files to be placed here
+    -->
+
+    <!--MODERNIZR-->
+    <script src="/js/dependencies/Modernizr/modernizr-2.6.2.min.js"></script>
+    <!--MODERNIZR END-->
+  </head>
+
+  <body ng-app="orangeMain" id="appOrange" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <div class="row header-block">
+      <a href="/" class="header-block-logo pull-left navbar-collapse collapse">
+        <img src="../images/logo-orange.png" alt="Orange Holiday Villas logo" class="logo-img">
+      </a>
+      <div class="row header-block-contacts pull-right">
+        <div id="contacts">
+          <div class="row block-contacts__details">Office: +357 26 102728</div>
+          <div class="row block-contacts__details">Mob: +357 99 828 886</div>
+          <div class="row block-contacts__details">Skype: prolat.natalia</div>
+        </div>
+
+        <button type="button" id="message" class="btn btn-success">Отправить</br>сообщение</button>
+
+        <form id="object-find" role="search">
+          <div class="form-group pull-left">
+            <input type="text" id="object-find_input" class="form-control" placeholder="№ объекта">
+          </div>
+          <button type="submit" id="object-find_button" class="btn btn-info pull-left">Найти</button>
+        </form>
+      </div>
+    </div> <!-- end header-block -->
+
+
+    <nav ng-controller="navController" class="navbar navbar-default" data-spy="affix" data-offset-top="200">
+
+      <div class="container">
+
+        <button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="/">
+          <img src="../images/logo-orange.png" alt="Orange Holiday Villas logo" height="50px">
+        </a>
+
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+
+          <ul class="nav navbar-nav">
+            <li ng-class="{active: isActiveMenuItem('/')}">
+              <a href="#main">Главная</a>
+            </li>
+            <li ng-class="{active: isActiveMenuItem('/exclusive')}">
+              <a href="#exclusive">Эксклюзив</a>
+            </li>
+            <li ng-class="{active: isActiveMenuItem('/longterm')}">
+              <a href="/longterm">Долгосрочная аренда</a>
+            </li>
+            <li ng-class="{active: isActiveMenuItem('/shortterm')}">
+              <a href="/shortterm">Посуточная аренда</a>
+            </li>
+            <li ng-class="{active: isActiveMenuItem('/sale')}">
+              <a href="/sale">Продажа</a>
+            </li>
+            <li ng-class="{active: isActiveMenuItem('/qa')}">
+              <a href="/qa">Вопросы</a>
+            </li>
+            <li ng-class="{active: isActiveMenuItem('/contacts')}">
+              <a href="/contacts">Контакты</a>
+            </li>
+            <li ng-class="{active: isActiveMenuItem('/services')}">
+              <a href="/services">Доп. услуги</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Оставить заявку<strong class="caret"></strong>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Снять недвижимость</li>
+                <li>
+                  <a href="#">&nbsp;&nbsp;&nbsp;Посуточно</a>
+                </li>
+                <li>
+                  <a href="#">&nbsp;&nbsp;&nbsp;Долгосрочно</a>
+                </li>
+                <li>
+                  <a href="#">Сдать недвижимость</a>
+                </li>
+                <li>
+                  <a href="#">Купить недвижимость</a>
+                </li>
+                <li>
+                  <a href="#">Продать недвижимость</a>
+                </li>
+              </ul> <!-- end dropdown-menu -->
+            </li>
+          </ul> <!-- end nav -->
+        </div> <!-- end navbar-collapse -->
+      </div> <!-- end container -->
+    </nav> <!-- navbar -->
+
+
+    <div class="container" id="content">
+        <%- body %>
+    </div>
+
+    <footer>
+    </footer>
+
+    <!--
+        Client-side Templates
+        ========================
+
+        HTML templates are important prerequisites of modern, rich client applications.
+        To work their magic, frameworks like Backbone, Angular, Ember, and Knockout require
+        that you load these templates client-side.
+
+        By default, your Gruntfile is configured to automatically load and precompile
+        client-side JST templates in your `assets/templates` folder, then
+        include them here automatically (between TEMPLATES and TEMPLATES END).
+
+        To customize this behavior to fit your needs, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+
+            + Import templates from other directories
+            + Use a different template engine (handlebars, jade, dust, etc.)
+            + Internationalize your client-side templates using a server-side
+              stringfile before they're served.
+    -->
+
+    <!--TEMPLATES-->
+    
+    <!--TEMPLATES END-->
+
+
+    <!--
+
+      Client-side Javascript
+      ========================
+
+      You can always bring in JS files manually with `script` tags, or asynchronously
+      on the client using a solution like AMD (RequireJS).  Or, if you like, you can
+      take advantage of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+      By default, files in your `assets/js` folder are included here
+      automatically (between SCRIPTS and SCRIPTS END).  Both JavaScript (.js) and
+      CoffeeScript (.coffee) are supported. In production, your scripts will be minified
+      and concatenated into a single file.
+
+      To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+      For example, here are a few things you could do:
+
+          + Change the order of your scripts
+          + Import scripts from other directories
+          + Use a different preprocessor, like TypeScript
+
+    -->
+
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/Sails/sails.io.js"></script>
+    <script src="/js/dependencies/jQuery/jquery.js"></script>
+    <script src="/js/dependencies/Bootstrap/bootstrap.js"></script>
+    <script src="/js/dependencies/Angular/angular.js"></script>
+    <script src="/js/modules/orangeMainModule.js"></script>
+    <script src="/js/controllers/navController.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>
