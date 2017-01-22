@@ -1,0 +1,45 @@
+//
+  Page
+  =============
+
+  Author:  iStudioDTD.com
+  Updated: January 2017
+  Notes:	 Hand coded for Orange Holiday Villas
+
+#main
+  .carousel.slide.slideanim#mainCarousel
+    //- Indicators
+    ol.carousel-indicators
+      li.active(data-slide-to="0", data-target="#mainCarousel")
+      li(data-slide-to="1", data-target="#mainCarousel")
+      li(data-slide-to="2" data-target="#mainCarousel")
+
+    //- Wrapper for slides
+    .carousel-inner
+      .item.active#slide01
+        .carousel-caption
+          h4 Slide 01 message
+          p
+            | Лорем ипсум долор сит амет, не дицит легере еос, еос еу волутпат цомпрехенсам,
+            | не хас долор омиттам!
+      .item#slide02
+        .carousel-caption
+          h4 Slide 02 message
+          p
+            | Лорем ипсум долор сит амет, не дицит легере еос, еос еу волутпат цомпрехенсам,
+            | не хас долор омиттам! При утамур сингулис адиписцинг не, не алии ехерци дуо.
+      .item#slide03
+        .carousel-caption
+          h4 Slide 03 message
+          p
+            | Лорем ипсум долор сит амет, не дицит легере еос, еос еу волутпат цомпрехенсам,
+            | не хас долор омиттам! При утамур сингулис адиписцинг не, не алии ехерци дуо.
+            | Тота игнота алияуандо ан яуо, хабео яуидам хендрерит те яуо.
+
+    //- Controls
+    a.left.carousel-control(data-slide="prev", href="#mainCarousel")
+      span.icon-prev
+    a.right.carousel-control(data-slide="next", href="#mainCarousel")
+      span.icon-next
+
+  .row.slideanim#mainCallout

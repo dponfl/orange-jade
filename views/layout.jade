@@ -1,13 +1,18 @@
+//
+  Layout
+  =============
+
+  Author:  iStudioDTD.com
+  Updated: January 2017
+  Notes:	 Hand coded for Orange Holiday Villas
+
 doctype html
 html
   head
-    if locals.title
-      title= title
-    else
-      title New Sails App
+    title Orange Holiday Villas
 
     // Viewport mobile tag for sensible mobile support
-    meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
 
     //-
       Stylesheets and Preprocessors
@@ -30,13 +35,28 @@ html
           + Use a different or additional preprocessor, like SASS, SCSS or Stylus
 
     // STYLES
-    link(rel="stylesheet", href="/styles/importer.css")
+    link(rel="stylesheet", href="/styles/bootstrap-glyphicons.css")
+    link(rel="stylesheet", href="/styles/bootstrap.css")
+    link(rel="stylesheet", href="/styles/exclusive.css")
+    link(rel="stylesheet", href="/styles/layout.css")
+    link(rel="stylesheet", href="/styles/main.css")
     // STYLES END
 
-    block styles
+    //-
+      Modernizr files to be placed here
 
-  body
+    // MODERNIZR
+    script(src="/js/dependencies/Modernizr/modernizr-2.6.2.min.js")
+    // MODERNIZR END
+
+  body#appOrange(ng-app="orangeMain", data-spy="scroll", data-target=".navbar", data-offset="60")
+    block header
+
+    block main
+
     block body
+
+    block footer
 
     //-
       Client-side Templates
@@ -59,7 +79,7 @@ html
             stringfile before they're served.
 
     // TEMPLATES
-
+    
     // TEMPLATES END
 
     //-
@@ -83,6 +103,11 @@ html
           + Use a different preprocessor, like TypeScript
 
     // SCRIPTS
-    script(src="/js/dependencies/sails.io.js")
+    script(src="/js/dependencies/Sails/sails.io.js")
+    script(src="/js/dependencies/jQuery/jquery.js")
+    script(src="/js/dependencies/Bootstrap/bootstrap.js")
+    script(src="/js/dependencies/Angular/angular.js")
+    script(src="/js/modules/orangeMainModule.js")
+    script(src="/js/controllers/navController.js")
     // SCRIPTS END
 

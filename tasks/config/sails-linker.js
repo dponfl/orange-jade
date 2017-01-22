@@ -202,6 +202,18 @@ module.exports = function(grunt) {
       }
     },
 
+    devModJsJade: {
+      options: {
+        startTag: '// MODERNIZR',
+        endTag: '// MODERNIZR END',
+        fileTmpl: 'script(src="%s")',
+        appRoot: '.tmp/public'
+      },
+      files: {
+        'views/**/*.jade': require('../pipeline').jsModFilesToInject
+      }
+    },
+
     prodJsJade: {
       options: {
         startTag: '// SCRIPTS',
