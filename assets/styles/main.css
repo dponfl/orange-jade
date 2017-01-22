@@ -55,7 +55,9 @@ Notes:	 Hand coded for Orange Holiday Villas
 /* --------------------------------------
    Global Styles
    -------------------------------------- */
-
+h1 > small {
+    margin-left: 30px;
+}
 
 /* --------------------------------------
    Typography
@@ -117,6 +119,16 @@ Notes:	 Hand coded for Orange Holiday Villas
     }
 
 }
+
+/* --------------------------------------
+   Buttons
+   -------------------------------------- */
+
+.btn-margin {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {

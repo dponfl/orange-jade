@@ -9,62 +9,71 @@
 .row.header-block
 
   a.header-block-logo.pull-left.navbar-collapse.collapse(href="/")
-    img.logo-img(src="../images/logo-orange.png", alt="Orange Holiday Villas logo")
+    img(src="../images/logo-orange.png", alt="Orange Holiday Villas logo").logo-img
 
   .row.header-block-contacts.pull-right
 
-    #contacts
+    #contacts-header
       .row.block-contacts__details Office: +357 26 102728
       .row.block-contacts__details Mob: +357 99 828 886
       .row.block-contacts__details Skype: prolat.natalia
 
-    button#message.btn.btn-success(type="button") Отправить</br>сообщение
+    button(type="button").btn.btn-success#message Отправить</br>сообщение
 
-    form#object-find(role="search")
+    form(role="search")#object-find
       .form-group.pull-left
-        input#object-find_input.form-control(type="text", placeholder="№ объекта")
-      button#object-find_button.btn.btn-info.pull-left(type="submit") Найти
+        input(type="text", placeholder="№ объекта").form-control#object-find_input
+      button(type="submit").btn.btn-info.pull-left#object-find_button Найти
 
-nav.navbar.navbar-default(data-spy="affix", data-offset-top="200")
+nav(data-spy="affix", data-offset-top="200").navbar.navbar-default
 
   .container
 
-    button.navbar-toggle(data-target=".navbar-responsive-collapse", data-toggle="collapse", type="button")
+    button(data-target=".navbar-responsive-collapse", data-toggle="collapse", type="button").navbar-toggle
       span.icon-bar
       span.icon-bar
       span.icon-bar
 
-    a.navbar-brand(href="/")
+    a(href="/").navbar-brand
       img(src="../images/logo-orange.png", alt="Orange Holiday Villas logo", height="50px")
 
     .navbar-collapse.collapse.navbar-responsive-collapse
+
       -
         var navbar_menu = [
-          {href:'#main', text: 'Главная'},
-          {href:'#exclusive', text: 'Эксклюзив'},
-          {href:'#longterm', text: 'Долгосрочная аренда'},
-          {href:'#shortterm', text: 'Посуточная аренда'},
-          {href:'#sale', text: 'Продажа'},
-          {href:'#qa', text: 'Вопросы'},
-          {href:'#contacts', text: 'Контакты'},
-          {href:'#services', text: 'Доп. услуги'}
+          {href:'#main', text: 'Главная', active: 'active'},
+          {href:'#exclusive', text: 'Эксклюзив', active: ''},
+          {href:'#longterm', text: 'Долгосрочная аренда', active: ''},
+          {href:'#shortterm', text: 'Посуточная аренда', active: ''},
+          {href:'#sale', text: 'Продажа', active: ''},
+          {href:'#qa', text: 'Вопросы', active: ''},
+          {href:'#contacts', text: 'Контакты', active: ''},
+          {href:'#services', text: 'Доп. услуги', active: ''}
           ]
+
       ul.nav.navbar-nav
         each element in navbar_menu
-          li
-            a(href="#{element.href}") #{element.text}
+          if element.active == 'active'
+            li.active
+              a(href="#{element.href}") #{element.text}
+          else
+            li
+              a(href="#{element.href}") #{element.text}
+
         li.dropdown
-          a.dropdown-toggle(href="#", data-toggle="dropdown")
+          a(href="#", data-toggle="dropdown").dropdown-toggle
             | Оставить заявку
             strong.caret
+
           -
             var dropdown_menu = [
-            {href: '#', text: 'Снять недвижимость: посуточно'},
-            {href: '#', text: 'Снять недвижимость: долгосрочно'},
-            {href: '#', text: 'Сдать недвижимость'},
-            {href: '#', text: 'Купить недвижимость'},
-            {href: '#', text: 'Продать недвижимость'}
+            {href: '', text: 'Снять недв. посуточно'},
+            {href: '', text: 'Снять недв. долгосрочно'},
+            {href: '', text: 'Сдать недвижимость'},
+            {href: '', text: 'Купить недвижимость'},
+            {href: '', text: 'Продать недвижимость'}
             ]
+
           ul.dropdown-menu
             //li.dropdown-header Снять недвижимость
             each el in dropdown_menu
