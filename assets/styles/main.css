@@ -125,8 +125,7 @@ h1 > small {
    -------------------------------------- */
 
 .btn-margin {
-    margin-top: 10px;
-    margin-right: 10px;
+    margin: 7px 5px;
 }
 
 
