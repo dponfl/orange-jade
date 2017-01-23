@@ -155,26 +155,27 @@
 
                 .panel.panel-body
                   .col-sm-5
-                    img(src="http://placehold.it/400x300", width="100%").thumbnail
-                    .col-lg-7.col-lg-offset-3.col-md-offset-2.col-sm-offset-0
-                      button.btn.btn-success.btn-lg.btn-margin Найти
-                      button.btn.btn-warning.btn-lg.btn-margin Очистить
+                    a(href="../../images/30593_700x500.jpg", data-lightbox="30593_300x200", data-title="Комментарий к фото")
+                      img(src="../../images/30593_700x500.jpg", width="100%").thumbnail.img-main
+                    .col-lg-12.col-lg-offset-0.col-md-offset-0.col-sm-offset-0
+                      button.btn.btn-success.btn-lg.btn-margin Стоимость
+                      button.btn.btn-warning.btn-lg.btn-margin Календарь занятости
 
                   .col-sm-7
                     .col-sm-12.form-group.clearfix
-                      label.col-sm-3.control-label.text-right Тип сделки:
+                      label.col-sm-3.control-label.text-right Адрес:
                       .col-sm-9.clearfix
                         | Lorem ipsum dolor sit amet.
 
                     .col-sm-12.form-group.clearfix
-                      label.col-sm-3.control-label.text-right Тип объекта:
+                      label.col-sm-3.control-label.text-right Посуточная аренда:
                       .col-sm-9.clearfix
                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         | A dolorem ducimus error eveniet ex ipsam itaque nemo omnis
                         | quas ullam?
 
                     .col-sm-12.form-group.clearfix
-                      label.col-sm-3.control-label.text-right Город:
+                      label.col-sm-3.control-label.text-right Кол. комнат:
                       .col-sm-9.clearfix
                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         | Accusantium, aliquid, animi atque consequatur consequuntur
@@ -182,20 +183,20 @@
                         | provident quia rem repellat sed sunt, veniam voluptatem.
 
                     .col-sm-12.form-group.clearfix
-                      label.col-sm-3.control-label.text-right Кол-во комнат:
+                      label.col-sm-3.control-label.text-right Сан. узел:
                       .col-sm-9.clearfix
                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         | Accusantium, aliquid, animi atque consequatur consequuntur
 
                     .col-sm-12.form-group.clearfix
-                      label.col-sm-3.control-label.text-right Кол-во комнат:
+                      label.col-sm-3.control-label.text-right Бассейн:
                       .col-sm-9.clearfix
                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         | Accusantium, aliquid, animi atque consequatur consequuntur
 
                   .col-sm-12
                     .col-sm-12.form-group.clearfix
-                      label.col-sm-2.control-label.text-right Подробное описание:
+                      label.col-sm-2.control-label.text-right Дополнительно:
                       .col-sm-10
                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         | Accusantium, aliquid, animi atque consequatur consequuntur
@@ -210,115 +211,65 @@
                         | delectus eos expedita fugit laborum minima odio perferendis
                         | provident quia rem repellat sed sunt, veniam voluptatem.
 
-                    .col-sm-12.form-group.clearfix
-                      label.col-sm-2.control-label.text-right Расположение:
-                      .col-sm-10
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        | Accusantium, aliquid, animi atque consequatur consequuntur
-                        | delectus eos expedita fugit laborum minima odio perferendis
-                        | provident quia rem repellat sed sunt, veniam voluptatem.
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        | Accusantium, aliquid, animi atque consequatur consequuntur
-                        | delectus eos expedita fugit laborum minima odio perferendis
-                        | provident quia rem repellat sed sunt, veniam voluptatem.
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        | Accusantium, aliquid, animi atque consequatur consequuntur
-                        | delectus eos expedita fugit laborum minima odio perferendis
-                        | provident quia rem repellat sed sunt, veniam voluptatem.
-                        | Accusantium, aliquid, animi atque consequatur consequuntur
-                        | delectus eos expedita fugit laborum minima odio perferendis
-                        | provident quia rem repellat sed sunt, veniam voluptatem.
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        | Accusantium, aliquid, animi atque consequatur consequuntur
-                        | delectus eos expedita fugit laborum minima odio perferendis
-                        | provident quia rem repellat sed sunt, veniam voluptatem.
-
-#longterm
-  .row.slideanim#longtermCallout
-    .cal-12
-      .well
-        .page-header.page-primary
-          h1 Эксклюзивные объекты
-            small Несколько слов...
-        .page-body#block-exclusive
-          h1.text-center Эксклюзивные объекты недвижимости
-          h2.text-center Аренда вилл и аппартаментов на Кипре
-          .alert.alert-info#exclusiveAlert
-            h3.text-center
-              | Здесь представлена недвижимость, которая находится в эксклюзивном управлении компании
-              | Orange Holliday villas.
+                  .col-lg-12
+                    ul.col-lg-10.list-inline#gallery-30593
+                      li
+                        a(href="../../images/gallery_30593_1.jpg", data-lightbox="roadtrip")
+                          img(src="../../images/gallery_30593_1.jpg").thumbnail.img-gallery
+                      li
+                        a(href="../../images/gallery_30593_2.jpg", data-lightbox="roadtrip")
+                          img(src="../../images/gallery_30593_2.jpg").thumbnail.img-gallery
+                      li
+                        a(href="../../images/gallery_30593_3.jpg", data-lightbox="roadtrip")
+                          img(src="../../images/gallery_30593_3.jpg").thumbnail.img-gallery
 
 #shortterm
   .row.slideanim#shorttermCallout
     .cal-12
       .well
         .page-header.page-primary
-          h1 Эксклюзивные объекты
+          h1 Посуточная аренда
             small Несколько слов...
-        .page-body#block-exclusive
-          h1.text-center Эксклюзивные объекты недвижимости
-          h2.text-center Аренда вилл и аппартаментов на Кипре
-          .alert.alert-info#exclusiveAlert
-            h3.text-center
-              | Здесь представлена недвижимость, которая находится в эксклюзивном управлении компании
-              | Orange Holliday villas.
+
+#longterm
+  .row.slideanim#longtermCallout
+    .cal-12
+      .well
+        .page-header.page-primary
+          h1 Долгосрочная аренда
+            small Несколько слов...
 
 #sale
   .row.slideanim#saleCallout
     .cal-12
       .well
         .page-header.page-primary
-          h1 Эксклюзивные объекты
+          h1 Продажа
             small Несколько слов...
         .page-body#block-exclusive
-          h1.text-center Эксклюзивные объекты недвижимости
-          h2.text-center Аренда вилл и аппартаментов на Кипре
-          .alert.alert-info#exclusiveAlert
-            h3.text-center
-              | Здесь представлена недвижимость, которая находится в эксклюзивном управлении компании
-              | Orange Holliday villas.
 
 #qa
   .row.slideanim#qaCallout
     .cal-12
       .well
         .page-header.page-primary
-          h1 Эксклюзивные объекты
+          h1 Вопросы и ответы
             small Несколько слов...
-        .page-body#block-exclusive
-          h1.text-center Эксклюзивные объекты недвижимости
-          h2.text-center Аренда вилл и аппартаментов на Кипре
-          .alert.alert-info#exclusiveAlert
-            h3.text-center
-              | Здесь представлена недвижимость, которая находится в эксклюзивном управлении компании
-              | Orange Holliday villas.
-
-#contacts
-  .row.slideanim#contactsCallout
-    .cal-12
-      .well
-        .page-header.page-primary
-          h1 Эксклюзивные объекты
-            small Несколько слов...
-        .page-body#block-exclusive
-          h1.text-center Эксклюзивные объекты недвижимости
-          h2.text-center Аренда вилл и аппартаментов на Кипре
-          .alert.alert-info#exclusiveAlert
-            h3.text-center
-              | Здесь представлена недвижимость, которая находится в эксклюзивном управлении компании
-              | Orange Holliday villas.
 
 #services
   .row.slideanim#servicesCallout
     .cal-12
       .well
         .page-header.page-primary
-          h1 Эксклюзивные объекты
+          h1 Дополнительные услуги
             small Несколько слов...
-        .page-body#block-exclusive
-          h1.text-center Эксклюзивные объекты недвижимости
-          h2.text-center Аренда вилл и аппартаментов на Кипре
-          .alert.alert-info#exclusiveAlert
-            h3.text-center
-              | Здесь представлена недвижимость, которая находится в эксклюзивном управлении компании
-              | Orange Holliday villas.
+
+#contacts
+  .row.slideanim#contactsCallout
+    .cal-12
+      .well
+        .page-header.page-primary
+          h1 Наши контакты
+            small Несколько слов...
+
+

@@ -21,6 +21,20 @@ Notes:	 Hand coded for Orange Holiday Villas
    Global Styles
    -------------------------------------- */
 
+#block-exclusive_filter {
+    margin-bottom: 20px;
+}
+
+.img-main {
+    width: 400px;
+    height: 300px;
+}
+
+.img-gallery {
+    width: 150px;
+    height: 100px;
+}
+
 #exclusiveAlert {
     margin-top: 40px;
 }

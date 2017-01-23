@@ -124,8 +124,12 @@ h1 > small {
    Buttons
    -------------------------------------- */
 
-.btn-margin {
+.btn-margin-header {
     margin: 7px 5px;
+}
+
+.btn-margin {
+    margin: 7px 10px;
 }
 
 
