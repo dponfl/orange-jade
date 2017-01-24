@@ -1,6 +1,6 @@
 /*
 
-Custom CSS
+Layout CSS
 =============
 
 Author:  iStudioDTD.com
@@ -9,30 +9,16 @@ Notes:	 Hand coded for Orange Holiday Villas
 
 */
 
-/* --------------------------------------
-   Layout
-   -------------------------------------- */
-
 #content {
     padding-top: 0;
 }
-
-/* --------------------------------------
-   Typography
-   -------------------------------------- */
-
-body {
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizelegibility;
-}
-
 
 /* --------------------------------------
    Navbar
    -------------------------------------- */
 
 nav {
-    z-index: 100000;
+    z-index: 9000;
 }
 
 .header-block {
@@ -124,59 +110,10 @@ nav {
 }
 
 /* --------------------------------------
-   Global Styles
+   Buttons
    -------------------------------------- */
 
-.slideanim {visibility:hidden;}
-.slide {
-    /* The name of the animation */
-    animation-name: slide;
-    -webkit-animation-name: slide;
-    /* The duration of the animation */
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    /* Make the element visible */
-    visibility: visible;
+.btn-margin-header {
+    margin: 7px 5px;
 }
 
-/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
-@keyframes slide {
-    0% {
-        opacity: 0;
-        transform: translateY(70%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-}
-@-webkit-keyframes slide {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(70%);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0%);
-    }
-}
-
-
-/* --------------------------------------
-   Media Queries
-   -------------------------------------- */
-
-/* Portrait & landscape phone */
-@media (max-width: 480px) {
-
-}
-
-/* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
-
-}
-
-/* Large desktop */
-@media (min-width: 1200px) {
-
-}

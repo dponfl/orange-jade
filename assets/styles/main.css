@@ -1,6 +1,6 @@
 /*
 
-Custom CSS
+Main section CSS
 =============
 
 Author:  iStudioDTD.com
@@ -9,10 +9,6 @@ Notes:	 Hand coded for Orange Holiday Villas
 
 */
 
-/* --------------------------------------
-   Main block
-   -------------------------------------- */
-
 #main-block {
     margin-top: 50px;
 }
@@ -20,6 +16,7 @@ Notes:	 Hand coded for Orange Holiday Villas
 /* --------------------------------------
    Carousel
    -------------------------------------- */
+
 #mainCarousel .item {
     height: 400px;
 }
@@ -53,40 +50,6 @@ Notes:	 Hand coded for Orange Holiday Villas
 }
 
 /* --------------------------------------
-   Global Styles
-   -------------------------------------- */
-h1 > small {
-    margin-left: 30px;
-}
-
-/* --------------------------------------
-   Typography
-   -------------------------------------- */
-
-.well {
-    margin: 20px 0;
-    padding: 0;
-}
-.well .page-body {
-    padding: 19px;
-}
-
-.well .page-header.page-primary {
-    margin-top: 0;
-    background-color: #2e6da4;
-}
-
-.well .page-header.page-primary h1 {
-    padding: 19px;
-    margin-top: 0;
-    color: white;
-}
-
-.well .page-header.page-primary h1 small {
-    color: gainsboro;
-}
-
-/* --------------------------------------
    Media Queries
    -------------------------------------- */
 
@@ -109,27 +72,6 @@ h1 > small {
         background: url("../images/main_carousel_small_03.jpg") top center no-repeat;
     }
 
-    .panel-heading {
-        font-size: 14px;
-        color: white;
-    }
-
-    .panel-body {
-        font-size: 10px;
-    }
-
-}
-
-/* --------------------------------------
-   Buttons
-   -------------------------------------- */
-
-.btn-margin-header {
-    margin: 7px 5px;
-}
-
-.btn-margin {
-    margin: 7px 10px;
 }
 
 
@@ -152,23 +94,6 @@ h1 > small {
         background: url("../images/main_carousel_medium_03.jpg") top center no-repeat;
     }
 
-    .carousel-caption {
-        font-size: 14px;
-    }
-
-    .carousel-caption h4 {
-        font-size: 20px;
-    }
-
-    .panel-heading {
-        font-size: 24px;
-        color: white;
-    }
-
-    .panel-body {
-        font-size: 12px;
-    }
-
 }
 
 /* Large desktop */
@@ -189,24 +114,5 @@ h1 > small {
     #slide03 {
         background: url("../images/main_carousel_large_03.jpg") top center no-repeat;
     }
-
-
-    .carousel-caption {
-        font-size: 24px;
-    }
-
-    .carousel-caption h4 {
-        font-size: 32px;
-    }
-
-    .panel-heading {
-        font-size: 26px;
-        color: white;
-    }
-
-    .panel-body {
-        font-size: 18px;
-    }
-
 
 }
