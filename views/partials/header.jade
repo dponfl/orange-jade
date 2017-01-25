@@ -67,16 +67,84 @@ nav(data-spy="affix", data-offset-top="200").navbar.navbar-default
 
           -
             var dropdown_menu = [
-            {href: '', text: 'Снять недв. посуточно'},
-            {href: '', text: 'Снять недв. долгосрочно'},
-            {href: '', text: 'Сдать недвижимость'},
-            {href: '', text: 'Купить недвижимость'},
-            {href: '', text: 'Продать недвижимость'}
+            {href: '#dailyRequest',       text: 'Снять недв. посуточно'},
+            {href: '#longtermRequest',    text: 'Снять недв. долгосрочно'},
+            {href: '',      text: 'Сдать недвижимость'},
+            {href: '',      text: 'Купить недвижимость'},
+            {href: '',      text: 'Продать недвижимость'}
             ]
 
           ul.dropdown-menu
             //li.dropdown-header Снять недвижимость
             each el in dropdown_menu
               li
-                a(href="#{el.href}") #{el.text}
+                a(href="#{el.href}", role="button", data-toggle="modal") #{el.text}
 
+          .modal.fade#dailyRequest
+            .modal-dialog
+              .modal-content
+                .modal-header
+                  button(data-dismiss="modal").close &times;
+                  h4.modal-title Снять недвижимость: Посуточно
+                .modal-body
+                  h4.text-center Заполните форму
+                  form.form-horizontal
+                    .form-group.clearfix
+                      label.col-sm-3.control-label.text-right Имя:
+                      .col-sm-9
+                        input(type="text", placeholder="Ваше имя").form-control
+                    .form-group.clearfix
+                      label.col-sm-3.control-label.text-right Телефон:
+                      .col-sm-9
+                        input(type="text", placeholder="Телефон для связи").form-control
+                    .form-group.clearfix
+                      label.col-sm-3.control-label.text-right E-mail:
+                      .col-sm-9
+                        input(type="text", placeholder="Ваш e-mail").form-control
+                    .form-group.clearfix
+                      label.col-sm-3.control-label.text-right Цена:
+                      .col-sm-9
+                        input(type="text", placeholder="Интересующая вас цена").form-control
+                    .form-group.clearfix
+                      label.col-sm-3.control-label.text-right Город:
+                      .col-sm-9
+                        input(type="text", placeholder="Какой город вас интересует").form-control
+                    .form-group.clearfix
+                      .col-lg-9.col-lg-offset-3.col-md-offset-3.col-sm-offset-3
+                        button.btn.btn-success.btn-lg.btn-margin Отправить
+                        button.btn.btn-warning.btn-lg.btn-margin Очистить
+
+          .modal.fade#longtermRequest
+            .modal-dialog
+              .modal-content
+                .panel.panel-info
+                  .panel-heading
+                    button(data-dismiss="modal").close &times;
+                    h4.modal-title Снять недвижимость: Долгосрочно
+                  .panel-body
+                    h4.text-center Заполните форму
+                    form.form-horizontal
+                      .form-group.clearfix
+                        label.col-sm-3.control-label.text-right Имя:
+                        .col-sm-9
+                          input(type="text", placeholder="Ваше имя").form-control
+                      .form-group.clearfix
+                        label.col-sm-3.control-label.text-right Телефон:
+                        .col-sm-9
+                          input(type="text", placeholder="Телефон для связи").form-control
+                      .form-group.clearfix
+                        label.col-sm-3.control-label.text-right E-mail:
+                        .col-sm-9
+                          input(type="text", placeholder="Ваш e-mail").form-control
+                      .form-group.clearfix
+                        label.col-sm-3.control-label.text-right Цена:
+                        .col-sm-9
+                          input(type="text", placeholder="Интересующая вас цена").form-control
+                      .form-group.clearfix
+                        label.col-sm-3.control-label.text-right Город:
+                        .col-sm-9
+                          input(type="text", placeholder="Какой город вас интересует").form-control
+                      .form-group.clearfix
+                        .col-lg-9.col-lg-offset-3.col-md-offset-3.col-sm-offset-3
+                          button.btn.btn-success.btn-lg.btn-margin Отправить
+                          button.btn.btn-warning.btn-lg.btn-margin Очистить
