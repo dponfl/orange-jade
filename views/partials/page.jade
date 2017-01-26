@@ -163,94 +163,77 @@
                       button.btn.btn-warning.btn-lg.btn-margin Календарь занятости
 
                   .col-sm-7
-                    .col-sm-12.form-group.clearfix
-                      label.col-sm-3.control-label.text-right Адрес:
-                      .col-sm-9.clearfix
-                        | Lorem ipsum dolor sit amet.
-
-                    .col-sm-12.form-group.clearfix
-                      label.col-sm-3.control-label.text-right Посуточная аренда:
-                      .col-sm-9.clearfix
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        | A dolorem ducimus error eveniet ex ipsam itaque nemo omnis
-                        | quas ullam?
-
-                    .col-sm-12.form-group.clearfix
-                      label.col-sm-3.control-label.text-right Кол. комнат:
-                      .col-sm-9.clearfix
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        | Accusantium, aliquid, animi atque consequatur consequuntur
-                        | delectus eos expedita fugit laborum minima odio perferendis
-                        | provident quia rem repellat sed sunt, veniam voluptatem.
-
-                    .col-sm-12.form-group.clearfix
-                      label.col-sm-3.control-label.text-right Сан. узел:
-                      .col-sm-9.clearfix
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        | Accusantium, aliquid, animi atque consequatur consequuntur
-
-                    .col-sm-12.form-group.clearfix
-                      label.col-sm-3.control-label.text-right Бассейн:
-                      .col-sm-9.clearfix
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        | Accusantium, aliquid, animi atque consequatur consequuntur
+                    -
+                      var exclusive_object_1 = [
+                      { label: 'Адрес:',
+                        text: 'Lorem ipsum dolor sit amet.'},
+                      { label: 'Посуточная аренда:',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.' +
+                              'A dolorem ducimus error eveniet ex ipsam itaque nemo omnis' +
+                              'quas ullam?'},
+                      { label: 'Кол. комнат:',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.' +
+                              'Accusantium, aliquid, animi atque consequatur consequuntur' +
+                              'delectus eos expedita fugit laborum minima odio perferendis' +
+                              'provident quia rem repellat sed sunt, veniam voluptatem.'},
+                      { label: 'Сан. узел:',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.' +
+                              'Accusantium, aliquid, animi atque consequatur consequuntur'},
+                      { label: 'Бассейн:',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.' +
+                              'Accusantium, aliquid, animi atque consequatur consequuntur'}
+                      ]
+                    each elem in exclusive_object_1
+                      .col-sm-12.form-group.clearfix
+                        label.col-sm-3.control-label.text-right #{elem.label}
+                        .col-sm-9.clearfix #{elem.text}
 
                   .col-sm-12
-                    .col-sm-12.form-group.clearfix
-                      label.col-sm-2.control-label.text-right Дополнительно:
-                      .col-sm-10
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        | Accusantium, aliquid, animi atque consequatur consequuntur
-                        | delectus eos expedita fugit laborum minima odio perferendis
-                        | provident quia rem repellat sed sunt, veniam voluptatem.
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        | Accusantium, aliquid, animi atque consequatur consequuntur
-                        | delectus eos expedita fugit laborum minima odio perferendis
-                        | provident quia rem repellat sed sunt, veniam voluptatem.
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        | Accusantium, aliquid, animi atque consequatur consequuntur
-                        | delectus eos expedita fugit laborum minima odio perferendis
-                        | provident quia rem repellat sed sunt, veniam voluptatem.
+                    -
+                      var exclusive_object_2 = [
+                      { label: 'Дополнительно:',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.' +
+                              'Accusantium, aliquid, animi atque consequatur consequuntur' +
+                              'delectus eos expedita fugit laborum minima odio perferendis' +
+                              'provident quia rem repellat sed sunt, veniam voluptatem.' +
+                              'Lorem ipsum dolor sit amet, consectetur adipisicing elit.' +
+                              'Accusantium, aliquid, animi atque consequatur consequuntur' +
+                              'delectus eos expedita fugit laborum minima odio perferendis' +
+                              'provident quia rem repellat sed sunt, veniam voluptatem.' +
+                              'Lorem ipsum dolor sit amet, consectetur adipisicing elit.' +
+                              'Accusantium, aliquid, animi atque consequatur consequuntur' +
+                              'delectus eos expedita fugit laborum minima odio perferendis' +
+                              'provident quia rem repellat sed sunt, veniam voluptatem.'}
+                      ]
+                    each elem in exclusive_object_2
+                      .col-sm-12.form-group.clearfix
+                        label.col-sm-2.control-label.text-right #{elem.label}
+                        .col-sm-10 #{elem.text}
+
+                  -
+                    var photogallery = [
+                    {href: '../../images/gallery_30593_1.jpg'},
+                    {href: '../../images/gallery_30593_2.jpg'},
+                    {href: '../../images/gallery_30593_3.jpg'},
+                    {href: '../../images/gallery_30593_1.jpg'},
+                    {href: '../../images/gallery_30593_2.jpg'},
+                    {href: '../../images/gallery_30593_3.jpg'},
+                    {href: '../../images/gallery_30593_1.jpg'},
+                    {href: '../../images/gallery_30593_2.jpg'},
+                    {href: '../../images/gallery_30593_3.jpg'},
+                    {href: '../../images/gallery_30593_1.jpg'},
+                    {href: '../../images/gallery_30593_2.jpg'},
+                    {href: '../../images/gallery_30593_3.jpg'},
+                    ]
 
                   .col-sm-12
                     h2.text-center Фотогалерея
                     ul.col-sm-10.col-sm-offset-1.list-inline.text-center#gallery-30593
-                      li
-                        a(href="../../images/gallery_30593_1.jpg", data-lightbox="roadtrip")
-                          img(src="../../images/gallery_30593_1.jpg").thumbnail.img-gallery
-                      li
-                        a(href="../../images/gallery_30593_2.jpg", data-lightbox="roadtrip")
-                          img(src="../../images/gallery_30593_2.jpg").thumbnail.img-gallery
-                      li
-                        a(href="../../images/gallery_30593_3.jpg", data-lightbox="roadtrip")
-                          img(src="../../images/gallery_30593_3.jpg").thumbnail.img-gallery
-                      li
-                        a(href="../../images/gallery_30593_1.jpg", data-lightbox="roadtrip")
-                          img(src="../../images/gallery_30593_1.jpg").thumbnail.img-gallery
-                      li
-                        a(href="../../images/gallery_30593_2.jpg", data-lightbox="roadtrip")
-                          img(src="../../images/gallery_30593_2.jpg").thumbnail.img-gallery
-                      li
-                        a(href="../../images/gallery_30593_3.jpg", data-lightbox="roadtrip")
-                          img(src="../../images/gallery_30593_3.jpg").thumbnail.img-gallery
-                      li
-                        a(href="../../images/gallery_30593_1.jpg", data-lightbox="roadtrip")
-                          img(src="../../images/gallery_30593_1.jpg").thumbnail.img-gallery
-                      li
-                        a(href="../../images/gallery_30593_2.jpg", data-lightbox="roadtrip")
-                          img(src="../../images/gallery_30593_2.jpg").thumbnail.img-gallery
-                      li
-                        a(href="../../images/gallery_30593_3.jpg", data-lightbox="roadtrip")
-                          img(src="../../images/gallery_30593_3.jpg").thumbnail.img-gallery
-                      li
-                        a(href="../../images/gallery_30593_1.jpg", data-lightbox="roadtrip")
-                          img(src="../../images/gallery_30593_1.jpg").thumbnail.img-gallery
-                      li
-                        a(href="../../images/gallery_30593_2.jpg", data-lightbox="roadtrip")
-                          img(src="../../images/gallery_30593_2.jpg").thumbnail.img-gallery
-                      li
-                        a(href="../../images/gallery_30593_3.jpg", data-lightbox="roadtrip")
-                          img(src="../../images/gallery_30593_3.jpg").thumbnail.img-gallery
+                      each elem in photogallery
+                        li
+                          a(href="#{elem.href}", data-lightbox="roadtrip")
+                            img(src="#{elem.href}").thumbnail.img-gallery
+
 
 #shortterm
   .row.slideanim#shorttermCallout
@@ -275,7 +258,6 @@
         .page-header.page-primary
           h1 Продажа
             small Несколько слов...
-        .page-body#block-exclusive
 
 #qa
   .row.slideanim#qaCallout
