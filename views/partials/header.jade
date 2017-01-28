@@ -83,36 +83,30 @@ nav(data-spy="affix", data-offset-top="200").navbar.navbar-default
           .modal.fade#dailyRequest
             .modal-dialog
               .modal-content
-                .modal-header
-                  button(data-dismiss="modal").close &times;
-                  h4.modal-title Снять недвижимость: Посуточно
-                .modal-body
-                  h4.text-center Заполните форму
-                  form.form-horizontal
-                    .form-group.clearfix
-                      label.col-sm-3.control-label.text-right Имя:
-                      .col-sm-9
-                        input(type="text", placeholder="Ваше имя").form-control
-                    .form-group.clearfix
-                      label.col-sm-3.control-label.text-right Телефон:
-                      .col-sm-9
-                        input(type="text", placeholder="Телефон для связи").form-control
-                    .form-group.clearfix
-                      label.col-sm-3.control-label.text-right E-mail:
-                      .col-sm-9
-                        input(type="text", placeholder="Ваш e-mail").form-control
-                    .form-group.clearfix
-                      label.col-sm-3.control-label.text-right Цена:
-                      .col-sm-9
-                        input(type="text", placeholder="Интересующая вас цена").form-control
-                    .form-group.clearfix
-                      label.col-sm-3.control-label.text-right Город:
-                      .col-sm-9
-                        input(type="text", placeholder="Какой город вас интересует").form-control
-                    .form-group.clearfix
-                      .col-lg-9.col-lg-offset-3.col-md-offset-3.col-sm-offset-3
-                        button.btn.btn-success.btn-lg.btn-margin Отправить
-                        button.btn.btn-warning.btn-lg.btn-margin Очистить
+                .panel.panel-info
+                  .panel-heading
+                    button(data-dismiss="modal").close &times;
+                    h4.modal-title.text-center Снять недвижимость: Посуточно
+                  .panel-body
+                    h4.text-center Заполните форму
+                    form.form-horizontal
+                      -
+                        var longTerm = [
+                        {label: 'Имя:', id: 'inputNameDaily', type: 'text', placeholder: 'Ваше имя'},
+                        {label: 'Телефон:', id: 'inputPhoneDaily', type: 'phone', placeholder: 'Телефон для связи'},
+                        {label: 'Email:', id: 'inputEmailDaily', type: 'email', placeholder: 'Ваш email'},
+                        {label: 'Цена:', id: 'inputPriceDaily', type: 'text', placeholder: 'Интересующая вас цена'},
+                        {label: 'Город:', id: 'inputCityDaily', type: 'text', placeholder: 'Какой город вас интересует'}
+                        ]
+                      each elem in longTerm
+                        .form-group.clearfix
+                          label(for="#{elem.id}").col-sm-3.control-label.text-right #{elem.label}
+                          .col-sm-7
+                            input(type="#{elem.type}", id="#{elem.id}" placeholder="#{elem.placeholder}").form-control
+                      .form-group.clearfix
+                        .col-lg-9.col-lg-offset-3.col-md-offset-3.col-sm-offset-3
+                          button.btn.btn-success.btn-lg.btn-margin Отправить
+                          button.btn.btn-warning.btn-lg.btn-margin Очистить
 
           .modal.fade#longtermRequest
             .modal-dialog
@@ -120,31 +114,24 @@ nav(data-spy="affix", data-offset-top="200").navbar.navbar-default
                 .panel.panel-info
                   .panel-heading
                     button(data-dismiss="modal").close &times;
-                    h4.modal-title Снять недвижимость: Долгосрочно
+                    h4.modal-title.text-center Снять недвижимость: Долгосрочно
                   .panel-body
                     h4.text-center Заполните форму
                     form.form-horizontal
-                      .form-group.clearfix
-                        label.col-sm-3.control-label.text-right Имя:
-                        .col-sm-9
-                          input(type="text", placeholder="Ваше имя").form-control
-                      .form-group.clearfix
-                        label.col-sm-3.control-label.text-right Телефон:
-                        .col-sm-9
-                          input(type="text", placeholder="Телефон для связи").form-control
-                      .form-group.clearfix
-                        label.col-sm-3.control-label.text-right E-mail:
-                        .col-sm-9
-                          input(type="text", placeholder="Ваш e-mail").form-control
-                      .form-group.clearfix
-                        label.col-sm-3.control-label.text-right Цена:
-                        .col-sm-9
-                          input(type="text", placeholder="Интересующая вас цена").form-control
-                      .form-group.clearfix
-                        label.col-sm-3.control-label.text-right Город:
-                        .col-sm-9
-                          input(type="text", placeholder="Какой город вас интересует").form-control
+                      -
+                        var longTerm = [
+                        {label: 'Имя:', id: 'inputNameLongterm', type: 'text', placeholder: 'Ваше имя'},
+                        {label: 'Телефон:', id: 'inputPhoneLongterm', type: 'phone', placeholder: 'Телефон для связи'},
+                        {label: 'Email:', id: 'inputEmailLongterm', type: 'email', placeholder: 'Ваш email'},
+                        {label: 'Цена:', id: 'inputPriceLongterm', type: 'text', placeholder: 'Интересующая вас цена'},
+                        {label: 'Город:', id: 'inputCityLongterm', type: 'text', placeholder: 'Какой город вас интересует'}
+                        ]
+                      each elem in longTerm
+                        .form-group.clearfix
+                          label(for="#{elem.id}").col-sm-3.control-label.text-right #{elem.label}
+                          .col-sm-7
+                            input(type="#{elem.type}", id="#{elem.id}" placeholder="#{elem.placeholder}").form-control
                       .form-group.clearfix
                         .col-lg-9.col-lg-offset-3.col-md-offset-3.col-sm-offset-3
-                          button.btn.btn-success.btn-lg.btn-margin Отправить
-                          button.btn.btn-warning.btn-lg.btn-margin Очистить
+                          button(type="submit").btn.btn-success.btn-lg.btn-margin Отправить
+                          button(type="cancel").btn.btn-warning.btn-lg.btn-margin Очистить

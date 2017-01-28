@@ -12,6 +12,22 @@ Notes:	 Hand coded for Orange Holiday Villas
 /* --------------------------------------
    Global Styles
    -------------------------------------- */
+
+.panel.panel-info {
+    position: relative;
+}
+
+.badge.badge-object {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    padding: 10px;
+}
+
+.glyphicon-tag:before {
+    margin-right: 10px;
+}
+
 h1 > small {
     margin-left: 30px;
 }
@@ -99,6 +115,10 @@ body {
         font-size: 10px;
     }
 
+    .badge.badge-object {
+        font-size: small;
+    }
+
 }
 
 /* --------------------------------------
@@ -118,10 +138,8 @@ body {
    -------------------------------------- */
 
 .badge-object {
-    background-color: darkred !important;
+    background-color: #C9302C !important;
     font-size: large;
-    padding: 3px 25px;
-    margin-left: 50px;
 }
 
 

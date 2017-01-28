@@ -103,37 +103,57 @@
                       label.col-sm-4.control-label.text-right Тип сделки:
                       .col-sm-8
                         select.form-control#dealType
-                          option(value="1") Аренда посуточная
-                          option(value="2") Аренда долгосрочная
-                          option(value="3") Продажа
+                          -
+                            var dealType = [
+                            {val: 1, text: 'Аренда посуточная'},
+                            {val: 2, text: 'Аренда долгосрочная'},
+                            {val: 3, text: 'Продажа'}
+                            ]
+                          each elem in dealType
+                            option(value="#{elem.val}") #{elem.text}
 
                     .form-group.clearfix
                       label.col-sm-4.control-label.text-right Тип объекта:
                       .col-sm-8
                         select.form-control#objectType
-                          option(value="1") Дом
-                          option(value="2") Таунхаус
-                          option(value="3") Квартира
+                          -
+                            var objectType = [
+                            {val: 1, text: 'Дом'},
+                            {val: 2, text: 'Таунхаус'},
+                            {val: 3, text: 'Квартира'}
+                            ]
+                          each elem in objectType
+                            option(value="#{elem.val}") #{elem.text}
 
                     .form-group.clearfix
                       label.col-sm-4.control-label.text-right Город
                       .col-sm-8
                         select.form-control#city
-                          option(value="1") Пафос
-                          option(value="2") Лимассол
-                          option(value="3") Ларнака
-                          option(value="4") Айа-Напа
-                          option(value="5") Никоссия
+                          -
+                            var city = [
+                            {val: 1, text: 'Пафос'},
+                            {val: 2, text: 'Лимассол'},
+                            {val: 3, text: 'Ларнака'},
+                            {val: 4, text: 'Айа-Напа'},
+                            {val: 5, text: 'Никоссия'}
+                            ]
+                          each elem in city
+                            option(value="#{elem.val}") #{elem.text}
 
                     .form-group.clearfix
                       label.col-sm-4.control-label.text-right Кол-во комнат:
                       .col-sm-8
                         select.form-control#rooms
-                          option(value="1") 1
-                          option(value="2") 2
-                          option(value="3") 3
-                          option(value="4") 4
-                          option(value="5") 5 и более
+                          -
+                            var rooms = [
+                            {val: 1, text: '1'},
+                            {val: 2, text: '2'},
+                            {val: 3, text: '3'},
+                            {val: 4, text: '4'},
+                            {val: 5, text: '5 и более'}
+                            ]
+                          each elem in rooms
+                            option(value="#{elem.val}") #{elem.text}
 
                     .form-group.clearfix
                       label.col-sm-4.control-label.text-right Номер объекта:
@@ -150,9 +170,10 @@
           .row
             .col-sm-12
               .panel.panel-info
+                .badge.badge-object
+                  span.glyphicon.glyphicon-tag Хит продаж
                 .panel-heading
                   h3 Объект № 30595
-                    span.badge.badge-object Хит продаж
 
                 .panel.panel-body
                   .col-sm-5
@@ -223,7 +244,7 @@
                     {href: '../../images/gallery_30593_3.jpg'},
                     {href: '../../images/gallery_30593_1.jpg'},
                     {href: '../../images/gallery_30593_2.jpg'},
-                    {href: '../../images/gallery_30593_3.jpg'},
+                    {href: '../../images/gallery_30593_3.jpg'}
                     ]
 
                   .col-sm-12
